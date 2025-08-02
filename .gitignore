@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+
+# VS Code settings
+.vscode/
+
+# JetBrains IDEs (e.g., IntelliJ, WebStorm)
+.idea/
+
+# Angular build outputs and config
+.angular/
+dist/
+tmp/
+out-tsc/
+
+# Maven build and config files
+target/
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# OS-specific files
+.DS_Store
+Thumbs.db
