@@ -1,0 +1,150 @@
+.form-layout {
+  display: flex;
+  height: 100vh;
+  background: #f7f9fc; // ✅ Changed from gradient to light white
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+
+  .sidebar {
+    width: 240px;
+    background-color: #1f2937;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    flex-shrink: 0;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    .brand {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fbbf24;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .menu {
+      .menu-item {
+        width: 100%;
+        padding: 14px 24px;
+        background: none;
+        border: none;
+        color: #d1d5db;
+        text-align: left;
+        font-size: 15px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #374151;
+          color: #fbbf24;
+        }
+
+        &.active {
+          background-color: #111827;
+          color: #fbbf24;
+        }
+      }
+    }
+  }
+
+  .form-wrapper {
+    margin-left: 240px;
+    padding: 50px 40px;
+    width: calc(100% - 240px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    background-color: #f7f9fc; // ✅ Added lighter background behind form card
+  }
+
+  .form-card {
+    background: #ffffff; // solid white card
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    width: 100%;
+    color: #111;
+
+    .form-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: #111;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 6px;
+        color: #333;
+      }
+
+      input,
+      select {
+        padding: 10px 14px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background-color: #fdfdfd;
+        font-size: 14px;
+        color: #111;
+
+        &:focus {
+          outline: none;
+          border-color: #3182ce;
+          background: white;
+        }
+      }
+
+      &.full-width {
+        grid-column: span 2;
+      }
+
+      .required {
+        color: #e11d48;
+      }
+    }
+
+    .radio-group,
+    .checkbox-group {
+      display: flex;
+      gap: 20px;
+
+      label {
+        font-weight: 500;
+        font-size: 14px;
+        color: #333;
+
+        input {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .button-row {
+      display: flex;
+      gap: 16px;
+      margin-top: 20px;
+
+      ion-button {
+        flex: 1;
+        font-weight: 600;
+        --border-radius: 6px;
+      }
+    }
+  }
+}

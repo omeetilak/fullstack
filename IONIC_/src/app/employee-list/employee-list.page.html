@@ -1,0 +1,49 @@
+<ion-content class="employee-list-content">
+  <div class="main-layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="brand">VORBIX</div>
+      <div class="menu">
+        <button (click)="goToHome()" class="menu-item">🏠 Home</button>
+        <button class="menu-item active">📋 Employee List</button>
+        <!-- Removed Add Employee from Sidebar -->
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="controls">
+        <ion-button color="warning" (click)="goToForm()">+ Add Employee</ion-button>
+      </div>
+
+      <ion-card>
+        <ion-grid>
+          <ion-row class="header-row">
+            <ion-col>Id</ion-col>
+            <ion-col>Name</ion-col>
+            <ion-col>Contact</ion-col>
+            <ion-col>Address</ion-col>
+            <ion-col>Department</ion-col>
+            <ion-col>Gender</ion-col>
+            <ion-col>Skills</ion-col>
+            <ion-col>Actions</ion-col>
+          </ion-row>
+
+          <ion-row *ngFor="let emp of employees" class="data-row">
+            <ion-col>{{ emp.id }}</ion-col>
+            <ion-col>{{ emp.name }}</ion-col>
+            <ion-col>{{ emp.contact }}</ion-col>
+            <ion-col>{{ emp.address }}</ion-col>
+            <ion-col>{{ emp.department }}</ion-col>
+            <ion-col>{{ emp.gender }}</ion-col>
+            <ion-col>{{ emp.skills.join(', ') }}</ion-col>
+            <ion-col>
+              <ion-button size="small" color="primary" (click)="edit(emp)">Edit</ion-button>
+              <ion-button size="small" color="danger" (click)="delete(emp.id!)">Delete</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

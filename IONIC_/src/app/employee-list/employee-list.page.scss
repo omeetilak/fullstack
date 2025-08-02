@@ -1,0 +1,121 @@
+.employee-list-content {
+  --background: #f9fafb;
+
+  .main-layout {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .sidebar {
+    width: 240px;
+    background-color: #1f2937;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+
+    .brand {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 40px;
+      color: #fbbf24;
+    }
+
+    .menu {
+      width: 100%;
+
+      .menu-item {
+        background: none;
+        border: none;
+        color: #d1d5db;
+        text-align: left;
+        width: 100%;
+        padding: 12px 24px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.3s ease all;
+
+        &:hover {
+          background-color: #374151;
+          color: #fbbf24;
+        }
+
+        &.active {
+          background-color: #111827;
+          color: #fbbf24;
+        }
+      }
+    }
+  }
+
+  .main-content {
+    flex-grow: 1;
+    padding: 24px;
+
+    .controls {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 12px;
+
+      ion-button {
+        --background: #fbbf24;
+        --color: #1f2937;
+        --border-radius: 8px;
+        font-weight: 500;
+      }
+    }
+
+    ion-card {
+      padding: 0;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
+      border-radius: 12px;
+      background: #ffffff;
+    }
+
+    ion-grid {
+      padding: 16px;
+    }
+
+    .header-row {
+      font-weight: 600;
+      background: #f3f4f6;
+      border-radius: 8px;
+      padding: 12px 0;
+      color: #374151;
+      font-size: 14px;
+    }
+
+    .data-row {
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid #e5e7eb;
+
+      ion-col {
+        font-size: 14px;
+        color: #374151;
+      }
+
+      ion-button {
+        --border-radius: 6px;
+        font-size: 12px;
+        --padding-start: 8px;
+        --padding-end: 8px;
+        --padding-top: 4px;
+        --padding-bottom: 4px;
+      }
+
+      ion-button[color="primary"] {
+        --background: #3b82f6;
+        --color: white;
+      }
+
+      ion-button[color="danger"] {
+        --background: #ef4444;
+        --color: white;
+      }
+    }
+  }
+}
